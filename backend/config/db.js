@@ -1,12 +1,9 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 
-const mongoURI = mongodb+srv://thisisriteshraj:%3Cdb_foMrkABCd6Xxr8y1%3E@cluster0.xdal3.mongodb.net/
-
-
-// Connect to MongoDB Atlas
 const connectDB = async () => {
     try {
-        await mongoose.connect(mongoURI, {
+        await mongoose.connect(process.env.MONGO_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });

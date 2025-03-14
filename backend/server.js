@@ -32,3 +32,5 @@ connectDB().then(() => {
 }).catch(err => {
     console.error("❌ Database connection failed", err);
 });
+
+//i thik it's 
